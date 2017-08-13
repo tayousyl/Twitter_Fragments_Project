@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bluish_grey">#CEDBD9</color>
+    <color name="material_grey">#eeeeee</color>
+    <color name="white">#fdfbfb</color>
+    <color name="black">#f6d91d</color>
+    <color name="grey_300">#3c4b3c</color>
+    <color name="green">#10d910</color>
+    <color name="cream">#f7f5ca</color>
+    <color name="twitter_blue">#00aced</color>
+
+
+</resources>

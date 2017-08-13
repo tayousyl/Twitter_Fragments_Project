@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rlprofile"
+        >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/lnprofil"
+    >
+
+    <ImageView
+    android:id="@+id/ivUserBackgroundImage"
+    android:layout_width="fill_parent"
+    android:layout_height="120dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:scaleType="centerCrop" />
+</LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="26dp"
+        android:layout_marginStart="26dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="80dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/ivUserPhoto"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:minWidth="50dp"
+            android:minHeight="50dp"
+            android:scaleType="fitCenter"
+            app:riv_corner_radius="5dip"
+            app:riv_mutate_background="true"
+            app:riv_tile_mode="clamp"
+            app:riv_oval="false"
+            android:adjustViewBounds="true"
+            app:riv_border_color="#bfe0ec"
+            app:riv_border_width="2dp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:id="@+id/rlUserHeader"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/lnprofil"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name"
+            android:id="@+id/tvUserName"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignLeft="@+id/tvUserScreenName"
+            android:layout_alignStart="@+id/tvUserScreenName" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_screen_name"
+            android:id="@+id/tvUserScreenName"
+            android:layout_below="@+id/tvUserName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textStyle="italic"
+            android:layout_marginLeft="126dp"
+            android:layout_marginStart="126dp" />
+
+        <TextView
+            android:layout_width="600dp"
+            android:gravity="center"
+            android:textStyle="italic"
+            android:layout_height="wrap_content"
+            android:text="@string/tweet_text"
+            android:id="@+id/tvUserDescription"
+            android:layout_below="@+id/tvUserScreenName"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+    </RelativeLayout>
+    <com.tayousyl.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        app:pstsShouldExpand="true"
+        app:pstsTextAllCaps="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlprofile"
+        app:pstsIndicatorColor="#BFE0EC"
+        app:pstsUnderlineColor="#BFE0EC"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tabs"
+        android:background="@android:color/white" />
+
+</RelativeLayout>

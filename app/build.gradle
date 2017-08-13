@@ -1,0 +1,50 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '25.0.0'
+
+    defaultConfig {
+        applicationId "com.codepath.apps.restclienttemplate"
+        minSdkVersion 16
+        targetSdkVersion 23
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+repositories {
+    jcenter()
+    maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.fasterxml.jackson.core:jackson-core:2.0.6'
+    compile 'com.fasterxml.jackson.core:jackson-annotations:2.0.6'
+    compile 'com.fasterxml.jackson.core:jackson-databind:2.0.6'
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.loopj.android:android-async-http:1.4.8'
+    //compile 'com.loopj.android:android-async-http:1.4.9'
+
+
+   // compile 'com.github.florent37:materialviewpager:1.2.1'
+
+//dependencies
+   // compile 'com.flaviofaria:kenburnsview:1.0.7'
+    //compile 'com.jpardogo.materialtabstrip:library:1.1.0'
+    //compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    compile 'com.michaelpardo:activeandroid:3.1.0-SNAPSHOT'
+    compile 'com.android.support:design:23.0.1'
+    compile 'com.makeramen:roundedimageview:2.2.0'
+    compile 'org.ocpsoft.prettytime:prettytime:3.1.0.Final'
+//    compile 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    compile 'org.apache.commons:commons-lang3:3.0'
+}
